@@ -85,7 +85,7 @@ class PACIO:
 							file = BytesIO(data.read(size))
 							return file
 
-	def WriteArc(self, name: str = "plist360.arc"):
+	def WriteArc(self, name: str = "plistps2.arc"):
 		with open(name, "wb") as arc:
 			arc.write(self.buffer.getvalue())
 			arc.flush()
