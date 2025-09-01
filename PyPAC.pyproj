@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>dafe968e-d18c-4b04-8aee-06c2b7102dcf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>DPAC\PACIO.py</StartupFile>
+    <StartupFile>DPAC\import.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,7 +24,7 @@
     <Folder Include="DPAC\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DPAC\PACIO.py" />
+    <Compile Include="DPAC\import.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
