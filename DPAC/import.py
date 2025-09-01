@@ -43,9 +43,11 @@ class Import:
 					print("Activating extension entry parsing...")
 					fieldcount &= 0xFFF
 					for j in range(fieldcount // 3):
-						id = unpack(">H", self.toc.read(2))[0]
-						filename = str(id)
+						id = unpack("<H", self.toc.read(2))[0]
+						filename = str(hex(id)[2:].zfill(4))
+						print(filename)
 						size = unpack("<H", self.toc.read(2))[0]
+						print(f'{size}')
 						Import._seek(self.data, basesector)
 						got = self.data.read(size)
 						if filename == file:
@@ -81,25 +83,26 @@ class Import:
 
 	def write_arc(self, output_name: str, *additional_tocs):
 		with open(output_name, 'wb') as arc:
-			arc.write(b'\xff\x00\x00\00')
+			arc.write(b'\xff\x00\x00\x00')
 			arc.write(self.toc.getvalue())
+			f = 1
 			if additional_tocs:
-				for f in range(1, len(additional_tocs)):
-					for g in additional_tocs:
-						arc.write(b'\xff\xff')
-						arc.write(pack('<H', f))
-						arc.write(g.getvalue())
+				for g in additional_tocs:
+					arc.write(b'\xff\xff')
+					arc.write(pack('<H', f))
+					f += 1
+					arc.write(g.getvalue())
 			arc.write(b'\xff\xff\xff\xff')
 			arc.flush()
 
 
 if __name__ == '__main__':
-	path = r"C:\mods\Patches\PS2\WWE RAW NEW GENERATION\pac\m.pac"
+	path = r"C:\mods\Patches\PS2\WWE RAW NEW GENERATION\pac\ch.pac"
 	MyPAC = Import(path, 1)
-	file = MyPAC.get_file('/MOT/GAME')
+	file = MyPAC.get_file('/EMD/0001')
 	if file:
 		print(file.getvalue())
-		with open('GAME', 'wb') as f:
+		with open('0001', 'wb') as f:
 			f.write(file.getvalue())
 			f.flush()
 	MyPAC.write_arc('MyArc.ARC')
