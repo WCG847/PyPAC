@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>dafe968e-d18c-4b04-8aee-06c2b7102dcf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>DPAC\import.py</StartupFile>
+    <StartupFile>pypac\yukes\PAC\Data.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,10 +21,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="DPAC\" />
+    <Folder Include="pypac\yukes\EPK8\" />
+    <Folder Include="pypac\yukes\EPAC\" />
+    <Folder Include="pypac\yukes\DPAC\" />
+    <Folder Include="pypac\" />
+    <Folder Include="pypac\yukes\" />
+    <Folder Include="pypac\yukes\TEX\" />
+    <Folder Include="pypac\yukes\PAC\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DPAC\import.py" />
+    <Compile Include="pypac\yukes\DPAC\File.py" />
+    <Compile Include="pypac\yukes\EPAC\File.py" />
+    <Compile Include="pypac\yukes\EPK8\File.py" />
+    <Compile Include="pypac\yukes\PAC\Data.py" />
+    <Compile Include="pypac\yukes\TEX\fpac.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
