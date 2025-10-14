@@ -83,8 +83,6 @@ class File:
 								for filee, meh in thing.items():
 									if file == filee:
 										for key4, value4 in meh.items():
-											print(repr(key4), [ord(c) for c in key4])
-											print(meh.items())
 											if key4 == 'lsn':
 												HANDLE.sector = value4
 											if key4 == 'size':

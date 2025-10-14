@@ -1,0 +1,98 @@
+{
+    "DPAC": {
+        "head": {
+            "id": 255,
+            "uid": 0,
+            "entries": {
+                "MOT": {
+                    "GAME": {
+                        "lsn": 0,
+                        "size": 60577
+                    },
+                    "BRAP": {
+                        "lsn": 7573,
+                        "size": 2503
+                    },
+                    "TAG": {
+                        "lsn": 7886,
+                        "size": 2149
+                    },
+                    "CAGE": {
+                        "lsn": 8155,
+                        "size": 812
+                    },
+                    "MINI": {
+                        "lsn": 8257,
+                        "size": 2214
+                    },
+                    "LADD": {
+                        "lsn": 8534,
+                        "size": 860
+                    },
+                    "WEAP": {
+                        "lsn": 8642,
+                        "size": 1456
+                    },
+                    "RUMB": {
+                        "lsn": 8824,
+                        "size": 284
+                    },
+                    "GIMM": {
+                        "lsn": 8860,
+                        "size": 2500
+                    },
+                    "WCAM": {
+                        "lsn": 9173,
+                        "size": 5
+                    },
+                    "MSTG": {
+                        "lsn": 9174,
+                        "size": 235
+                    },
+                    "M3DA": {
+                        "lsn": 9204,
+                        "size": 268
+                    }
+                },
+                "CHAR": {
+                    "ALL": {
+                        "lsn": 9238,
+                        "size": 220
+                    }
+                },
+                "COM": {
+                    "ALL": {
+                        "lsn": 9266,
+                        "size": 179
+                    }
+                },
+                "IYMP": {
+                    "MARK": {
+                        "lsn": 9289,
+                        "size": 41
+                    }
+                },
+                "WPON": {
+                    "PROP": {
+                        "lsn": 9295,
+                        "size": 6
+                    },
+                    "KAGE": {
+                        "lsn": 9296,
+                        "size": 3
+                    }
+                },
+                "MVMT": {
+                    "MOTN": {
+                        "lsn": 9297,
+                        "size": 42571
+                    },
+                    "REMT": {
+                        "lsn": 14619,
+                        "size": 19696
+                    }
+                }
+            }
+        }
+    }
+}

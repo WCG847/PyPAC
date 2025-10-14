@@ -11,7 +11,7 @@ class Data:
 		for i in range(count):
 			id, ptr = unpack('<2H', adr.read(4))
 			ptr &= 0x1FFFFF
-			size = unpack('B', adr.read(1))[0] * 65536; adr.seek(-1, 1)
+			size = unpack('B', adr.read(1))[0] << 16; adr.seek(-1, 1)
 			address = ptr + size
 			size = ((unpack('<I', adr.read(4))[0]) << 32 & 0xFFFFFFFFFFFFFFFF) >> 40 & 0xFFFFFFFFFFFFFFFF
 			print(size)

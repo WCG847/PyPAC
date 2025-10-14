@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>dafe968e-d18c-4b04-8aee-06c2b7102dcf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>pypac\yukes\PAC\Data.py</StartupFile>
+    <StartupFile>pypac\yukes\PAC\export\Data.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,6 +26,7 @@
     <Folder Include="pypac\yukes\DPAC\" />
     <Folder Include="pypac\" />
     <Folder Include="pypac\yukes\" />
+    <Folder Include="pypac\yukes\PAC\export\" />
     <Folder Include="pypac\yukes\TEX\" />
     <Folder Include="pypac\yukes\PAC\" />
   </ItemGroup>
@@ -34,6 +35,7 @@
     <Compile Include="pypac\yukes\EPAC\File.py" />
     <Compile Include="pypac\yukes\EPK8\File.py" />
     <Compile Include="pypac\yukes\PAC\Data.py" />
+    <Compile Include="pypac\yukes\PAC\export\Data.py" />
     <Compile Include="pypac\yukes\TEX\fpac.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

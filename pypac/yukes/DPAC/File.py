@@ -43,9 +43,8 @@ class File:
 			fsector: int
 			count, fsector = unpack("<2H", toc.read(4))
 
-			for i in range(0, count, RECORD_COUNT):
-				name, sector, size = unpack("<4s2H", toc.read(16))
-
+			for i in range(0, count, 2):
+				name, sector, size = unpack("<4s2H", toc.read(8))
 				ENTRY.setdefault(folder, {})[name.rstrip(b"\x20").decode("cp1252")] = {
 					"lsn": sector,
 					"size": size,
@@ -81,8 +80,6 @@ class File:
 								for filee, meh in thing.items():
 									if file == filee:
 										for key4, value4 in meh.items():
-											print(repr(key4), [ord(c) for c in key4])
-											print(meh.items())
 											if key4 == 'lsn':
 												HANDLE.sector = value4
 											if key4 == 'size':

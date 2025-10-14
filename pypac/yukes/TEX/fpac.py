@@ -8,6 +8,7 @@ class FilePack:
 		self.file.write(pack('<?', True)) # pretend we "converted the address"
 		self.file.seek(0)
 
+
 	def __getitem__(self, index: int) -> tuple[str, str, int, int, bytes]:
 		self.file.seek(0)
 		SIZE = 32
