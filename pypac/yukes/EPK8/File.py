@@ -37,7 +37,7 @@ class File:
 		ENTRY = {}
 		while toc.tell() < len(toc.getvalue()):
 
-			folder = unpack("4s", toc.read(4))[0].rstrip(b"\x20").decode("cp1252")
+			folder = unpack("4s", toc.read(4))[0].rstrip(b"\x20").decode("shift_jis")
 
 			count: int
 			islong: bool
@@ -49,12 +49,12 @@ class File:
 				name, sector, size = unpack("<8s2I", toc.read(16))
 				size *= 256
 
-				ENTRY.setdefault(folder, {})[name.rstrip(b"\x20").decode("cp1252")] = {
+				ENTRY.setdefault(folder, {})[name.rstrip(b"\x20").decode("shift_jis")] = {
 					"lsn": sector,
 					"size": size,
 				}
 		self.buffer = {
-			ID.decode("cp1252"): {
+			ID.decode("shift_jis"): {
 				"head": {"id": 255, "uid": File.FILE_ID, "entries": ENTRY}
 			}
 		}

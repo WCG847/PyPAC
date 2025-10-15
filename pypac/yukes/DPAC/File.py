@@ -45,6 +45,7 @@ class File:
 
 			for i in range(0, count, 2):
 				name, sector, size = unpack("<4s2H", toc.read(8))
+				size *= 256
 				ENTRY.setdefault(folder, {})[name.rstrip(b"\x20").decode("cp1252")] = {
 					"lsn": sector,
 					"size": size,
@@ -94,3 +95,7 @@ class File:
 		cs = offset + size
 		print(cs)
 		return self.data[offset:cs]
+
+if __name__ == '__main__':
+	p = File(r"C:\mods\Patches\PS2\WWE RAW NEW GENERATION\pac\m.pac")
+	p.dump('M.JSON')

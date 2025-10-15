@@ -12,7 +12,7 @@ class Data:
 				for label, folder in record.items():
 					if label == 'path':
 						with open(folder, 'rb') as f:
-							adr = data.tell()
+							adr = (data.tell()) + 1
 							da = f.read()
 							size = len(da)
 							data.write(da)
